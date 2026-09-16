@@ -1,0 +1,22 @@
+name: TextLayoutResearch
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  TextLayoutResearch:
+    type: application
+    platform: iOS
+    sources: [TextLayoutResearch]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.example.TextLayoutResearch
+      SWIFT_VERSION: 6.0
+      INFOPLIST_FILE: TextLayoutResearch/Info.plist
+  TextLayoutResearchTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [TextLayoutResearchTests]
+    dependencies:
+      - target: TextLayoutResearch
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.example.TextLayoutResearchTests
